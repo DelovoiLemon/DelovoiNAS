@@ -1,4 +1,11 @@
 #!/bin/bash
+sudo mkdir /data/
+sudo mkdir /data/Media
+sudo mkdir /data/Backups
+sudo mkdir /data/Media/Torrents
+sudo mkdir /data/Media/Videos
+sudo mkdir /data/Media/Music
+sudo mkdir /data/Media/Pictures
 echo 'Starting installiation..,'
 echo 'Starting system update...'
 sudo apt-get update -y>/dev/null
