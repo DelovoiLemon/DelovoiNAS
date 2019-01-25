@@ -1,33 +1,10 @@
 #!/bin/bash
-echo 'Starting installiation..,'
-echo 'Starting system update...'
 sudo apt-get update -y>/dev/null
-echo 'System update complite!'
-echo 'Starting system upgrade...'
 sudo apt-get upgrade -y>/dev/null
-echo 'System upgrade complite!'
-echo 'Starting samba setup...'
-sudo apt-get install -y samba>/dev/null
-sudo cp Samba/smb.conf /etc/samba/smb.conf>/dev/null
-sudo service smbd restart>/dev/null
-echo 'Samba setup complite!'
-echo 'Starting transmission-daemon setup...'
-sudo apt-get install -y transmission-daemon>/dev/null
-sudo service transmission-daemon stop>/dev/null
-sudo cp ~/DelovoiNAS/transmission-daemon/settings.json /etc/transmission-daemon/settings.json>/dev/null
-sudo service transmission-daemon start>/dev/null
-echo 'Transmission-daemon setup complite!'
-echo 'Webmin installing starting...'
-sudo apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl libdigest-md5-perl
-echo 'Installing SSH tools...'
-sudo apt-get install openssh-server
-echo 'Installing SSH tools complite!'
-cd Webmin/
-./install.sh
+cd ~/DelovoiNAS/Plex
+wget https://downloads.plex.tv/plex-media-server/1.14.1.5488-cc260c476/plexmediaserver_1.14.1.5488-cc260c476_amd64.deb
+mv plexmediaserver_1.14.1.5488-cc260c476_amd64.deb Plex.deb
+sudo dpkg -i Plex.deb>/dev/null
+sudo systemctl start plexmediaserver>/dev/null
+sudo systemctl enable plexmediaserver>/dev/null
 cd ..
-echo 'Webmin install complite!'
-echo 'Plex installing starting...'
-cd ~/DelovoiNAS/Serviio/
-./install.sh
-echo 'Plex install complite!'
-echo 'Instaliation complite!'
