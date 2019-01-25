@@ -1,5 +1,6 @@
 # DelovoiNAS
-# One click script for Network Atached Storage(Ubuntu) for home with dlna(PLEX), samba, webmin and transmission with configs.
+# One click script for setup Network Atached Storage(Ubuntu) for home with dlna(PLEX), samba, webmin and transmission with configs.
+# Instaliation process:
 1. Run sudo ./unpack.sh to unzip files to /root (Root home directory) or tar -xf DelovoiNAS.tar
 2. cd DelovoiNAS
 3. Run sudo ./install.sh to start installiation.
