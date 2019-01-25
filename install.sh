@@ -7,9 +7,9 @@ echo 'Starting system upgrade...'
 sudo apt-get upgrade -y>/dev/null
 echo 'System upgrade complite!'
 echo 'Starting samba setup...'
-sudo apt-get install -y samba>/dev/null
-sudo cp Samba/smb.conf /etc/samba/smb.conf>/dev/null
-sudo service smbd restart>/dev/null
+cd Samba
+sudo ./install.sh
+cd ..
 echo 'Samba setup complite!'
 echo 'Starting transmission-daemon setup...'
 sudo apt-get install -y transmission-daemon>/dev/null
