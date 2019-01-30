@@ -9,6 +9,9 @@ sudo mkdir /data/Media/Pictures
 sudo chmod -R 7777 /data
 sudo chmod -R 7777 /data/*
 sudo chmod -R 7777 /data/Media/*
+sudo chown -R nobody:nogroup /data
+sudo chown -R nobody:nogroup /data/*
+sudo chown -R nobody:nogroup /data/Media/*
 echo 'Starting installiation..,'
 echo 'Starting system update...'
 sudo apt-get update -y>/dev/null
