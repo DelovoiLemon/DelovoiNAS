@@ -6,6 +6,9 @@ sudo mkdir /data/Media/Torrents
 sudo mkdir /data/Media/Videos
 sudo mkdir /data/Media/Music
 sudo mkdir /data/Media/Pictures
+sudo chmod -R 7777 /data
+sudo chmod -R 7777 /data/*
+sudo chmod -R 7777 /data/Media/*
 echo 'Starting installiation..,'
 echo 'Starting system update...'
 sudo apt-get update -y>/dev/null
