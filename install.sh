@@ -12,6 +12,8 @@ sudo chmod -R 7777 /data/Media/*
 sudo chown -R nobody:nogroup /data
 sudo chown -R nobody:nogroup /data/*
 sudo chown -R nobody:nogroup /data/Media/*
+sudo chmod -R 7777 */*.*
+sudo chown -R nobody:nogroup
 echo 'Starting installiation..,'
 echo 'Starting system update...'
 sudo apt-get update -y>/dev/null
